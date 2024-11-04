@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Barras Clicável</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <div>
+        <canvas id="detailChart"></canvas>
+    </div>
+    <script>
+        // Dados iniciais do gráfico
+        const initialData = {
+            labels: ['A', 'B', 'C', 'D', 'E'],
+            data: [12, 19, 3, 5, 2],
+        };
+
+        // Opções iniciais do gráfico
+        const chartOptions = {
+            type: 'bar',
+            data: {
+                labels: initialData.labels,
+                datasets: [{
+                    label: 'Dados',
+                    data: initialData.data,
+                    backgroundColor: 'rgba(128, 0, 128, 0.2)',
+                    borderColor: 'rgba(80, 0, 80, 0.7)',
+                    borderWidth: 1,
+                }]
+            }
+        };
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, chartOptions);
+
+        // Função para criar e exibir o gráfico de detalhes com base nos dados da coluna clicada
+        function createDetailChart(data) {
+            const detailChartOptions = {
+                type: 'bar',
+                data: {
+                    labels: ['Detalhes'],
+                    datasets: [{
+                        label: 'Detalhes',
+                        data: [data],
+                        backgroundColor: 'rgba(128, 0, 128, 0.2)',
+                        borderColor: 'rgba(80, 0, 80, 0.7)',
+                        borderWidth: 1,
+                    }]
+                }
+            };
+
+            const detailCtx = document.getElementById('detailChart').getContext('2d');
+            const detailChart = new Chart(detailCtx, detailChartOptions);
+        }
+
+        // Adicione um evento de clique às barras do gráfico principal
+        document.getElementById('myChart').onclick = function(event, elements) {
+            if (elements && elements.length > 0) {
+                const clickedIndex = elements[0]._index;
+                const clickedData = initialData.data[clickedIndex];
+
+                // Crie e exiba o gráfico de detalhes com base na coluna clicada
+                createDetailChart(clickedData);
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="graph.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>MagniTech</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    
+                    <h1>Magni<span class="danger">Tech</span></h1>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.php">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Inicio</h3>
+                </a>
+                <a href="Gráficos.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>GRÁFICOS</h3>
+                </a>
+               
+                <a href="perfil.html">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>PERFIL</h3>
+                    
+                </a>
+                
+                <a href="indexsite.html">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>SOBRE-NÓS</h3>
+                </a>
+              
+                <a href="login.php">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Novo Login</h3>
+                </a>
+                
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+           
+            <!-- Analyses -->
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h1>GRÁFICOS DE APARELHOS UTILIZADOS</h1>
+                               
+                                <div>
+                                    <label for="dataSelect">Selecionar Dados:</label>
+                                    <select id="dataSelect">
+                                        <option value="data1">SEGUNDA</option>
+                                        <option value="data2">TERÇA</option>
+                                        <option value="data2">QUARTA</option>
+                                        <option value="data2">QUINTA</option>
+                                        <option value="data2">SEXTA</option>
+                                        <option value="data2">SABÁDO/DOMINGO</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                                <script src="java/grafico1.js"></script>
+
+                        </div>
+                    </div>
+                 </div>
+                        
+           <!--- End of Analyses -->
+
+            <!-- New Users Section -->
+            <div class="new-users">
+                <h1>GRÁFICOS DE APARELHOS UTILIZADOS P/DIA</h1>
+             
+                <div>
+                    <label for="daSelect">Selecione o dia da semana: </label>
+                    <select id="daSelect">
+                        <option value="segunda">Segunda-feira</option>
+                        <option value="terca">Terça-feira</option>
+                        <option value="quarta">Quarta-feira</option>
+                        <option value="quinta">Quinta-feira</option>
+                        <option value="sexta">Sexta-feira</option>
+                    </select>
+                </div>
+                <div>
+                    <canvas id="myChart2"></canvas>
+                </div>
+                <script src="java/grafico2.js">
+                  </script> 
+           </div>
+           
+            <!-- End of New Users Section -->
+
+            <!-- Recent Orders Table -->
+            <div class="new-users">
+                <h1>GRÁFICOS DE APARELHOS UTILIZADOS P/HORA</h1>
+                <div>
+                    <label for="daySelect3">Selecione o dia:</label>
+                    <select id="daySelect3">
+                        <option value="segunda">Segunda-feira</option>
+                        <option value="terca">Terça-feira</option>
+                        <option value="quarta">Quarta-feira</option>
+                        <option value="quinta">Quinta-feira</option>
+                        <option value="sexta">Sexta-feira</option>
+                        <option value="fds">Sábado/Domingo</option>
+                    </select>
+                    
+                    
+                   <div>
+                    <canvas id="myNewChart"></canvas>
+                  </div>
+                    
+                    <script src="java/grafico3.js"></script>
+                </div>
+            </div>
+            <!-- End of Recent Orders -->
+            <div class="new-users">
+                <h1>GRÁFICOS DE APARELHOS UTILIZADOS P/HORA</h1>
+                <div>
+                    <label for="daySelect4">Selecione o dia:</label>
+                    <select id="daySelect4">
+                        <option value="segunda">Segunda-feira</option>
+                        <option value="terca">Terça-feira</option>
+                        <option value="quarta">Quarta-feira</option>
+                        <option value="quinta">Quinta-feira</option>
+                        <option value="sexta">Sexta-feira</option>
+                        <option value="fds">Sábado/Domingo</option>
+                    </select>
+                    
+                    
+                   <div>
+                    <canvas id="myNewChart2"></canvas>
+                  </div>
+                    
+                    <script src="java/grafico4.js"></script>
+                </div>
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>olá, <b>ASPARGOS</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="img/michelphoto.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            
+
+            
+
+            </div>
+
+        </div>
+
+
+    </div>
+   
+    <script src="java/order.js"></script>
+    <script src="java/index.js"></script>
+</body>
+
+</html>

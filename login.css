@@ -1,0 +1,480 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+body{
+    margin:0px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2d2e2e;
+	overflow: hidden;
+}
+.main-login{
+    width:103vw;
+    height: 118vh;;
+    background: rgb(36, 35, 35);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+	animation: fadeIn 1s;
+}
+
+.left-login{
+	width: 83vw;
+    height: 35vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;     
+}
+
+.left-login-image{
+    width:30vw;
+}
+
+.left-login > h1{
+    color:rgb(0, 0, 0);
+    font-size:2vw;
+
+}
+
+.right-login{
+    width:50vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width:40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:30px 35px;
+    background: #3a3a3a;
+    border-radius: 20px;
+	box-shadow: 0px 10px 40px #7c1daf;
+	animation: fadeIn 0.5s;
+}
+
+
+.card-login > h1{
+    color:#000000;
+    font-weight: 1000;
+    margin:0;
+}
+
+.card-login > h2 {
+	font-size: 12px;
+}
+
+.textfield{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin:10px 0px;
+	align-items: center;
+}
+
+.textfield > input {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    background: #7c4a96;
+    color: rgb(0, 0, 0);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px rgb(57, 12, 116);
+    outline: none;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.textfield > input:hover {
+    box-shadow: 0px 0px 10px #7c4a96;
+    transform: scale(1.02);
+}
+.text-danger {
+	color: red;
+}
+.bi-exclamation-triangle-fill {
+	fill: red;
+}
+
+.erro-login p {
+    margin: 0;
+}
+
+.textfield div{
+	display: flex;
+	align-items: flex-start;
+}
+
+.textfield div label{
+    color:aliceblue;
+    margin-bottom: 10px;
+}
+
+.textfield>input::placeholder{
+    color:#000000
+}
+.textfield > h2{
+	font-size: 10px;
+}
+
+.btn-login{
+    width:100%;
+    padding:16px 0px;
+    margin:25px;
+    border:none;
+    border-radius: 8px;
+    outline:none;
+    text-transform: uppercase;
+    font-weight:800 ;
+    letter-spacing: 3px;
+    color:black;
+    background: #7c4a96;
+    cursor:pointer;
+    box-shadow: 0px 10px 40px -12px rgb(57, 12, 116) ;
+}
+
+.card-login > .text-danger{
+	font-size: 12px;
+}
+/*Navbar*/
+ a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	box-shadow: #7c4a96;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: #7c4a96;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid #7c4a96;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: #858585;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: #7c4a96;
+}
+
+h2{
+	font-size: 15px;
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	padding: 1vh;
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+
+.fade-link {
+	opacity: 9;
+	transition: opacity 0.8s;
+  }
+  
+  .fade-link.fade-out {
+	opacity: 0;
+  }
+  
+
+
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 7rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: #7c4a96;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+/* End Header section */
+
+
+
+@media only screen and (max-width:768px){
+    .card-login{
+        width:55%;
+
+    }
+}
+@media (min-width: 768px) {
+    .main-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .left-login {
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 5vw;
+    }
+
+    .left-login-image {
+        width: 70%;
+      
+    }
+
+    .left-login > h1 {
+        font-size: 5.5vh;
+        margin-top: 20px;
+    }
+
+    .right-login {
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-login {
+        width: 60%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        background: #524f4f;
+        border-radius: 15px;
+     
+    }
+
+    .textfield {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .textfield > input {
+        padding: 15px;
+		width: 460px;
+    }
+
+    .btn-login {
+        padding: 16px 0;
+        margin: 25px 0;
+    }
+}
+@media only screen and (max-width:390px){
+    body{
+		overflow-y: auto;
+		background: cover;
+	}
+	
+	
+	.main-login{
+        flex-direction: column;
+    }
+	.left-login-image{
+		width:40vh;
+	}
+	.left-login > h1{
+		font-size: 3vh;
+	}
+	.card-login {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background: #524f4f;
+        border-radius: 15px;
+      
+    }
+	.textfield {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .textfield > input {
+        padding: 15px;
+		width: 200px;
+    }
+
+    .btn-login {
+        padding: 16px 0;
+        margin: 25px 0;
+    }
+	.right-login{
+		height: 67vh;
+	}
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

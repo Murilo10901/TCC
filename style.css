@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+@font-face {
+    font-family: 'Vermin Vibes';
+    src: url('Vermin Vibes V.otf') format('opentype');
+}
+
+:root{
+    --color-primary: #7c4a96;
+    --color-danger: #7c4a96;
+    --color-warning: #7c4a96;
+    --color-white: #fff;
+    --color-info-dark: #49066d9c;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+    --background-image: url('img/fundoclaro.jpg');
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 1rem 2rem #7d11d4a6;
+}
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #7c4a96;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 0 4rem #a913ce77;
+    --color-info-dark: #8e0dd49c;
+    --background-image: url('img/fundo.jpg');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+html{
+    font-size: 14px;
+}
+.LETRA1{
+    align-items: center;
+}
+body{
+    width: auto;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+    background-image: var(--background-image);
+    background-size: cover;
+   
+}
+.dark-mode-active body{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: c5ad23;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    --background-image: url('img/fundo.jpg');
+}
+
+
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+.magnititle{
+    font-family: 'Vermin Vibes', sans-serif;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 0.98rem;
+}
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-warning);;
+}
+
+.success{
+    color: var(--color-success);
+}
+
+
+
+.container{
+    display: grid;
+    width: auto;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
+
+aside{
+    height: 100vh;
+}
+aside .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+aside .toggle .logo{
+    display: flex;
+    gap: 0.5rem;
+}
+
+aside .toggle .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .sider .close-btn{
+    padding-right: 1rem;
+    display: none;
+    align-items: left;
+}
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 100vh;
+    position: relative;
+    top: 0rem;
+    transition: all 0.3s ease;
+    animation: slideInFromLeft 1s;
+}
+
+aside .sidebar:hover{
+    box-shadow: none;
+}
+
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    width: 100%;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span{
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count{
+    background-color: var(--color-danger);
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+main{
+    margin-top: 4.5rem;
+    animation: fadeInFromLeft 1s;
+    margin-left: 5.5rem;
+}
+  
+main .analyse{
+    display: grid;
+    grid-template-columns: repeat(2, 7fr);
+    gap: 2.4rem;
+}
+
+main .analyse > div{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 4rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .analyse > div:hover{
+    box-shadow: none;
+}
+
+main .analyse h3{
+    margin-left: 0.6rem;
+    font-size: 1rem;
+}
+
+main .new-users{
+    margin-top: 1.3rem;
+    
+}
+
+main .new-users {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width:24rem;
+   
+}
+
+main .new-users :hover{
+    box-shadow: none;
+}
+
+main .new-users  .user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+}
+
+main .new-users .user img{
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.1rem;
+    border-radius: 50%;
+}
+
+main .recent-orders{
+    margin-top: 1.3rem;
+}
+
+main .recent-orders h2{
+    margin-bottom: 0.8rem;
+}
+
+main .recent-orders table{
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+
+main .recent-orders table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .recent-orders a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-section .nav button{
+    display: none;
+    top:1.5rem;
+}
+
+.right-section .dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 95%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .analyse{
+        grid-template-columns: 1fr;
+        gap: 0;
+        width: 10rem; 
+    height: 10rem; 
+    padding: 1rem;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 40%;
+    }
+
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 0.8rem;
+    }
+
+    main .recent-orders table{
+        width: 83vw;
+    }
+
+    main table thead tr th:last-child,
+    main table thead tr th:first-child{
+        display: none;
+    }
+
+    main table tbody tr td:last-child,
+    main table tbody tr td:first-child{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --background-image: url('img/fundob_mobile.png');
+    }
+}
+
+.dark-mode-variables {
+    --background-image: url('img/fundo_mobile.jpg');
+}
+    body {
+        overflow-x: auto; 
+        overflow-y: auto;  
+        background-size:cover;
+        background-attachment: fixed;
+        zoom:100%;
+        --background-image: url(img/fundob_mobile.png);
+    }
+
+    .dark-mode-active body{
+      --background-image: url(img/fundo_mobile.png);
+    }
+
+
+    .container {
+        width: 90%; 
+        max-width: none; 
+        margin: 0;
+        padding: -1;
+        display: block;
+        grid-template-columns: 1fr;
+    }
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 17rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        top:0;
+        left: -100%;
+        display: none;
+        animation: showMenu 0.4s ease forwards;
+    }
+
+    
+
+    @keyframes showMenu {
+       to{
+        left: 0;
+       } 
+    }
+
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .sidebar .close{
+        display: inline-block;
+        cursor: pointer;
+        align-items:center;
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 5.4rem;
+
+    }
+
+    main .new-users {
+        margin-top: 1.3rem;
+        width: 300px;
+    }
+
+    main .new-users .user {
+        flex-basis: 100%;
+    }
+
+    main .recent-orders {
+        margin-top: 1.3rem;
+        width: 100%; 
+    }
+
+
+    .right-section {
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right-section .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: var(--color-white);
+        padding: 0 var(--padding-1);
+        height: 4.6rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+        margin: 0;
+    }
+
+    .right-section .nav .dark-mode {
+        width: 4.4rem;
+        position: absolute;
+        left: 70%;
+    }
+
+    .right-section .profile .info {
+        display: none;
+    }
+
+    .right-section .nav button {
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    
+    }
+
+    .right-section .nav button span {
+        font-size: 2rem;
+    }
+
+
+
+@keyframes fadeInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  

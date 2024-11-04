@@ -1,0 +1,39 @@
+?php
+// Configurações do banco de dados
+$servername = "seu_servidor";
+$username = "seu_usuario";
+$password = "sua_senha";
+$dbname = "seu_banco_de_dados";
+
+// Conexão com o banco de dados
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar a conexão
+if ($conn->connect_error) {
+    die("Erro na conexão com o banco de dados: " . $conn->connect_error);
+}
+
+// Receber CPF do formulário
+$cpf = $_POST['cpf'];
+
+// Consulta SQL para verificar se o CPF existe no banco de dados
+$sql = "SELECT * FROM usuarios WHERE cpf = '$cpf'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // O CPF existe no banco de dados, você pode processar os dados ou redirecionar para outra página
+    while ($row = $result->fetch_assoc()) {
+        // Aqui você pode acessar os dados do usuário, por exemplo:
+        $nome = $row['nome'];
+        $email = $row['email'];
+        
+        // Faça o que desejar com os dados do usuário
+        echo "Usuário encontrado: Nome: $nome, Email: $email";
+    }
+} else {
+    // CPF não encontrado no banco de dados
+    echo "CPF não encontrado no banco de dados.";
+}
+
+$conn->close();
+?>
